@@ -1,18 +1,18 @@
 # SPARCS & ISS Orbital Animation
 
-This repository contains MATLAB scripts designed to generate 3D orbital trajectory animations for the SPARCS CubeSat and the International Space Station (ISS). 
+This repository contains MATLAB scripts designed to generate 3D orbital trajectory animations for the SPARCS CubeSat and the International Space Station (ISS). It also demonstrates passes over Tempe, AZ.
 
 ## Files Included
 
-* `sparcs_animation.m` — Generates the orbital animation for the SPARCS CubeSat based on its Two-Line Element (TLE) data.
-* `iss_animation.m` — Generates an orbital animation for the ISS by pulling orbital data directly from a designated web source.
+* `SPARCS_tempe_tracker.m` — Generates the orbital animation for the SPARCS CubeSat based on its Two-Line Element (TLE) data.
+* `iss_tempe_tracker.m` — Generates an orbital animation for the ISS by pulling orbital data directly from a designated web source.
 
 ## Customization & Flexibility
 
 These scripts are built to be easily adaptable for other spaceflight simulations or orbital mechanics projects:
 
-* **Animate Any Satellite:** In the `sparcs_animation.m` file, you are not limited to just SPARCS. You can replace the default SPARCS TLE string with any other satellite's TLE. Simply paste in a new TLE to instantly visualize a completely different orbit.
-* **Custom Data Sources:** The `iss_animation.m` script pulls its data from a specific website URL. You can easily replace this URL in the code with any other valid endpoint or database (such as CelesTrak or Space-Track) to fetch live or updated parameters for different targets.
+* **Animate Any Satellite:** In the `SPARCS_tempe_tracker.m` file, you are not limited to just SPARCS. You can replace the default SPARCS TLE string with any other satellite's TLE. Simply paste in a new TLE to instantly visualize a completely different orbit.
+* **Custom Data Sources:** The `iss_tempe_tracker.m` script pulls its data from a specific website URL. You can easily replace this URL in the code with any other valid endpoint or database (such as CelesTrak or Space-Track) to fetch live or updated parameters for different targets.
 
 ## How to Use
 
