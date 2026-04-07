@@ -43,29 +43,14 @@ end
 %% 5. Configure the Visualization
 viewer = satelliteScenarioViewer(sc);
 
-% Give the 3D window a second to physically open before we move the camera
-pause(2); 
-
-% 1. Extract SPARCS's exact starting coordinates [Latitude; Longitude; Altitude]
-[startPos, ~] = states(sparcsSat, startTime, "CoordinateFrame", "geographic");
-
-% 2. Move the camera to those coordinates, but 2,000 km higher up
-% startPos(3) is the satellite's altitude in meters. We add 2,000,000 meters.
-campos(viewer, startPos(1), startPos(2), startPos(3) + 2000000);
-
-% 3. Lock the target onto SPARCS
-camtarget(viewer, sparcsSat);
-
-% Add the ground track 
-leadTime = 5800; 
-trailTime = 5800;
-groundTrack(sparcsSat, "LeadTime", leadTime, "TrailTime", trailTime);
+% Add a ground track (1.5 hours ahead/behind in seconds)
+leadTime = 5400; 
+trailTime = 5400;
+groundTrack(iss, "LeadTime", leadTime, "TrailTime", trailTime);
 
 %% 6. Animate the Orbit
-% Set playback speed
-viewer.PlaybackSpeedMultiplier = 500; 
+% The PlaybackSpeedMultiplier belongs to the viewer, NOT the scenario!
+viewer.PlaybackSpeedMultiplier = 60; 
 
 disp('Starting animation...');
 play(sc);
-
-
