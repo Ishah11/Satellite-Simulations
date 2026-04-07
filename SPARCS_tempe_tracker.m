@@ -12,8 +12,8 @@ disp('Loading custom TLE data for SPARCS...');
 
 % Hardcode the user-provided TLE strings
 tleLine0 = 'SPARCS';
-tleLine1 = '1 99973U 26004Z   26050.54039672  .00003742  00000-0  40948-3 0  9992';
-tleLine2 = '2 99973  97.7983  51.0779 0003822 131.3500 228.8046 14.88403184  5791';
+tleLine1 = 'insert tle here';
+tleLine2 = 'insert tle here';
 
 % Combine the lines and write them to a local file
 sparcsTLE = [string(tleLine0); string(tleLine1); string(tleLine2)];
